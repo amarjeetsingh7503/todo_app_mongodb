@@ -8,10 +8,7 @@ const MONGO_URI = process.env.MONGO_URI;
 
 const app = express();
 
-mongoose.connect(`${MONGO_URI}`, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(`${MONGO_URI}`);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
